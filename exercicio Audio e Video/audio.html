@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <audio id="myAudio" src="horse.ogv"  preload="none">
+    </audio>
+    <img id="imagem" src="play.png" onclick="play()">
+    
+
+    <script>
+
+        let audio = document.getElementById('myAudio');
+        let imagem = document.getElementById('imagem');
+
+        function play(){
+            audio.play();
+            imagem.src = "loading.gif"
+        }
+
+       
+        
+        
+
+    </script>
+</body>
+
+</html>
