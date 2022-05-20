@@ -44,11 +44,18 @@
         let escolha = document.getElementsByTagName('img');
         let campos = document.getElementsByTagName('td');
 
+        escolha.forEach(td => {
+            img.addEventListener('dragstart', dragstart);
+            img.addEventListener('drag', drag);
+            img.addEventListener('dragend', dragend);
+            
+        });
+
         campos.forEach(td => {
-            td.addEventListener('dragenter');
-            td.addEventListener('dragover');
-            td.addEventListener('dragleave');
-            td.addEventListener('drop');
+            td.addEventListener('dragenter', dragenter);
+            td.addEventListener('dragover', dragover);
+            td.addEventListener('dragleave', dragleave);
+            td.addEventListener('drop', drop);
         });
 
         function dragEnter(){
@@ -56,7 +63,10 @@
         }
 
         function dragOver(){
+
+            let isdragged = document.getElementsByTagName('img');
             
+            this.appendChild(isdragged)
         }
 
         function dragLeave(){
